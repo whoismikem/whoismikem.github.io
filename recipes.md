@@ -4,7 +4,8 @@ title: "Recipes"
 permalink: "/recipes/"
 ---
 <ul>
-  {% for recipe in site.recipes %}
+  {% assign sorted_pages = site.recipes | sort %}
+  {% for recipe in sorted_pages %}
     <li>
       <a href="{{ recipe.url }}">{{ recipe.name }}</a>
     </li>
