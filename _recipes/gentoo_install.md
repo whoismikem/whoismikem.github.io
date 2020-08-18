@@ -9,8 +9,8 @@ name: Gentoo Install
 
 * List disks attached: `lsblk`
 * Partition the disk: `parted -a optimal /dev/sda`
-** Set GPT label: `mklabel gpt`
-** List partitions: `print`
+  *  Set GPT label: `mklabel gpt`
+  * ** List partitions: `print`
 ** Remove partitions when <num> is number of partition: `rm <num>` 
 ** Set unit: `unit mib`
 ** Create first partition:  
@@ -29,3 +29,4 @@ name 3 swap
 mkpart primary 1643 -1
 name 4 rootfs
 ``` 
+
