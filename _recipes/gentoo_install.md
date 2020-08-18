@@ -11,7 +11,7 @@ name: Gentoo Install
 * Partition the disk: `parted -a optimal /dev/sda`
   * Set GPT label: `mklabel gpt`
   * List partitions: `print`
-  * Remove partitions when <num> is number of partition: `rm <num>` 
+  * Remove partitions where <part_num> is number of partition: `rm <part_num>` 
   * Set unit: `unit mib`
   * Create first partition:  
 ```
