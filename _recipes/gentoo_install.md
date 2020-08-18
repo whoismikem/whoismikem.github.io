@@ -1,5 +1,5 @@
 ---
-name: gentoo install
+name: Gentoo Install
 ---
 
 # Gentoo Install - Virtual Box
@@ -7,4 +7,25 @@ name: gentoo install
 * Add user account: `useradd -m -G users <username>`
 * Start sshd: `rc-service sshd start`
 
-
+* List disks attached: `lsblk`
+* Partition the disk: `parted -a optimal /dev/sda`
+** Set GPT label: `mklabel gpt`
+** List partitions: `print`
+** Remove partitions when <num> is number of partition: `rm <num>` 
+** Set unit: `unit mib`
+** Create first partition:  
+```
+mkpart primary 1 3
+name 1 grub
+set 1 bios_grub on
+```
+** Create third (swap) partition:
+```
+mkpart primary 131 1643
+name 3 swap
+```
+** Create fourth (root) partition:
+```
+mkpart primary 1643 -1
+name 4 rootfs
+``` 
