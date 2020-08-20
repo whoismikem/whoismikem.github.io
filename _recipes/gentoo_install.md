@@ -115,7 +115,7 @@ eselect locale set 6
 ```
 * Reload the environment: `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
 
-* Kernel:  
+* Kernel:
 ```
 emerge --ask sys-kernel/gentoo-sources
 # MANUAL Kernel Setup
@@ -142,6 +142,7 @@ nano -w /etc/fstab
 /dev/sda3               none            swap            sw              0 0
 /dev/sda4               /               ext4            noatime         0 1
 ```
+
 * Set hostname: `nano -w /etc/conf.d/hostname`
 * Configure networking:
 ```
@@ -153,12 +154,14 @@ cd /etc/init.d
 ln -s net.lo net.enp0s3
 rc-update add net.enp0s3 default
 ```
+
 * Set root password: `passwd`
 * Install system logging package: 
 ```
 emerge --ask app-admin/sysklogd`
 rc-update add sysklogd default
 ```
+
 * Install cron package: 
 ```
 emerge --ask sys-process/cronie
