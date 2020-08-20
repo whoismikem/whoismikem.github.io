@@ -114,7 +114,8 @@ eselect locale list
 eselect locale set 6
 ```
 * Reload the environment: `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
-* Kernel:
+
+* Kernel:  
 ```
 emerge --ask sys-kernel/gentoo-sources
 # MANUAL Kernel Setup
@@ -132,7 +133,8 @@ nano -w /etc/fstab
 # Build the kernel
 genkernel all
 ```
-* Fonfigure fstab:
+
+* Configure fstab:
 ```
 nano -w /etc/fstab
 # Add
