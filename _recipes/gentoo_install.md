@@ -28,7 +28,7 @@ name 3 swap
 ```
 mkpart primary 1643 -1
 name 4 rootfs
-``` 
+```
 * Create Filesystem - Format as ext4:
 ```
 kfs.ext4 /dev/sda2
