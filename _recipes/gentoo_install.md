@@ -91,6 +91,35 @@ eselect profile list
 eselect profile set 20
 ```
 * Updating the @world set. This takes a while: `emerge --ask --verbose --update --deep --newuse @world`
+* Set USE flags: 
+```
+nano -w /etc/portage/make.conf
+# Add to file above
+USE="-gtk -gnome -qt4 -qt5 -kde X dvd alsa"
+```
+* Timezone:
+```
+ls /usr/share/zoneinfo
+echo "America/Detroit" > /etc/timezone
+emerge --config sys-libs/timezone-data
+```
+* Locale:
+```
+nano -w /etc/locale.gen
+# Add to file
+en_US ISO-8859-1
+en_US.UTF-8 UTF-8
+locale-gen
+eselect locale list
+eselect locale set 6
+```
+* Reload the environment: `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
+
+
+
+
+
+
 
 
 
