@@ -3,7 +3,7 @@ name: Gentoo Install
 ---
 
 # Gentoo Install - Virtual Box
-
+* [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation)
 * Add user account: `useradd -m -G users <username>`
 * Start sshd: `rc-service sshd start`
 
