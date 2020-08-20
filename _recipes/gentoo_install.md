@@ -114,8 +114,70 @@ eselect locale list
 eselect locale set 6
 ```
 * Reload the environment: `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
+* Kernel:
+```
+emerge --ask sys-kernel/gentoo-sources
+# MANUAL Kernel Setup
+ls -l /usr/src/linux
+# Aid in listing devices for kernel config
+emerge --ask sys-apps/pciutils
+# List pci hardware
+lspci
+cd /usr/src/linux
 
+# Genkernel Kernel Setup
+emerge --ask sys-kernel/genkernel
+nano -w /etc/fstab
+# Insert: /dev/sda2               /boot           ext4            defaults        0 2
+# Build the kernel
+genkernel all
+```
+* Fonfigure fstab:
+```
+nano -w /etc/fstab
+# Add
+/dev/sda2               /boot           ext4            defaults        0 2
+/dev/sda3               none            swap            sw              0 0
+/dev/sda4               /               ext4            noatime         0 1
+```
+* Set hostname: `nano -w /etc/conf.d/hostname`
+* Configure networking:
+```
+emerge --ask --noreplace net-misc/netifrc
+nano -w /etc/conf.d/net
+# DHCP
+config_enp0s3="dhcp"
+cd /etc/init.d 
+ln -s net.lo net.enp0s3
+rc-update add net.enp0s3 default
+```
+* Set root password: `passwd`
+* Install system logging package: 
+```
+emerge --ask app-admin/sysklogd`
+rc-update add sysklogd default
+```
+* Install cron package: 
+```
+emerge --ask sys-process/cronie
+rc-update add cronie default
+```
+* Enable sshd: `rc-update add sshd default`
+* Install extra tools: `emerge --ask net-misc/dhcpcd sys-fs/e2fsprogs htop vim`
 
+* Configure bootloader:
+```
+emerge --ask --verbose sys-boot/grub:2
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+* Done: 
+```
+exit
+# unmount filesystems
+
+reboot
+```
 
 
 
