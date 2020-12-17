@@ -50,6 +50,7 @@ mkdir /mnt/gentoo/boot
 mount /dev/sda2 /mnt/gentoo/boot
 ```
 * Make sure system date/time is accurate: `date`
+  - If date is wrong, automatically update it: `ntpd -q -g`
 * Setup stage:
   * Choose a stage link from here: https://gentoo.org/downloads/
   * Download Stage: 
