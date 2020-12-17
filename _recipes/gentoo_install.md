@@ -115,7 +115,7 @@ eselect locale set 6
 ```
 * Reload the environment: `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
 
-* Kernel:
+* Kernel setup:
 ```
 emerge --ask sys-kernel/gentoo-sources
 # MANUAL Kernel Setup
