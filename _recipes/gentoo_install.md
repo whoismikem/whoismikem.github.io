@@ -132,7 +132,6 @@ emerge --ask sys-apps/pciutils
 # List pci hardware
 lspci
 cd /usr/src/linux
-
 # Genkernel Kernel Setup
 emerge --ask sys-kernel/genkernel
 nano -w /etc/fstab
