@@ -19,6 +19,11 @@ mkpart primary 1 3
 name 1 grub
 set 1 bios_grub on
 ```
+  * Create second (boot) partition:  
+```
+mkpart primary 3 131
+name 2 boot
+```
   * Create third (swap) partition:
 ```
 mkpart primary 131 1643
@@ -29,9 +34,10 @@ name 3 swap
 mkpart primary 1643 -1
 name 4 rootfs
 ```
+  * Exit parted: `quit`
 * Create Filesystem - Format as ext4:
 ```
-kfs.ext4 /dev/sda2
+mkfs.ext4 /dev/sda2
 mkfs.ext4 /dev/sda4
 mkswap /dev/sda3
 # Activate swap
