@@ -98,6 +98,7 @@ eselect profile list
 eselect profile set 20
 ```
 * Updating the @world set. This takes a while: `emerge --ask --verbose --update --deep --newuse @world`
+* Clean up after update: `emerge --depclean`
 * Set USE flags: 
 ```
 nano -w /etc/portage/make.conf
@@ -116,6 +117,7 @@ nano -w /etc/locale.gen
 # Add to file
 en_US ISO-8859-1
 en_US.UTF-8 UTF-8
+# Then run
 locale-gen
 eselect locale list
 eselect locale set 6
@@ -133,9 +135,14 @@ emerge --ask sys-apps/pciutils
 lspci
 cd /usr/src/linux
 # Genkernel Kernel Setup
+# Compile from source
 emerge --ask sys-kernel/genkernel
+# Binary without compile
+emerge --ask sys-kernel/gentoo-kernel-bin
+
 nano -w /etc/fstab
-# Insert: /dev/sda2               /boot           ext4            defaults        0 2
+# Insert: 
+/dev/sda2               /boot           ext4            defaults        0 2
 # Build the kernel
 genkernel all
 ```
@@ -164,7 +171,7 @@ rc-update add net.enp0s3 default
 * Set root password: `passwd`
 * Install system logging package: 
 ```
-emerge --ask app-admin/sysklogd`
+emerge --ask app-admin/sysklogd
 rc-update add sysklogd default
 ```
 
@@ -186,7 +193,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 exit
 # unmount filesystems
-
 reboot
 ```
 

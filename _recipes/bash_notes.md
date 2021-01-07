@@ -20,3 +20,6 @@ else
     echo "Error: Directory $dir_path does not exists."
 fi
 ```
+
+### While Loop
+`while true; do <command>; sleep 2; done`
