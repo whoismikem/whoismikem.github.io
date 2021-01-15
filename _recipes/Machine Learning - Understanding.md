@@ -48,8 +48,14 @@ name: Machine Learning - Understanding
 
 ## General Notes
 * Ethics of ML - Models can be bias
+* graphical image annotation tool: https://github.com/tzutalin/labelImg
 
 ## Terms
 * Supervised learning
 * Target Data
-* 
+
+## Solutions
+* scikit-learn - https://scikit-learn.org 
+    - Features: Classification, regression, clustering and others
+* PyTorch 
+    - Open source Facebook product
