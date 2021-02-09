@@ -5,7 +5,7 @@ categories: chrysler
 tags: chrysler
 ---
 
-Chrysler Town & Country suffer form a problem where the transmission cooler hoses start leaking transmission fluid. Following is a small guide what it takes to replace the old transmission fluid hose lines on a 2014 Town and Country with e v6 Flex Fuel Engine.
+Chrysler Town & Country suffer form a problem where the transmission cooler hoses start leaking transmission fluid. Following is a small guide outlining what it takes to replace the old transmission fluid hose lines on a 2014 Town and Country with a v6 Flex Fuel Engine.
 
 ## What you need
 * New/Replacement Transmission Cooler Hoses.
