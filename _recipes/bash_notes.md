@@ -37,3 +37,12 @@ for i in *; do
 <command>
 done
 ```
+
+### String Contains Substring
+Check if string contains substring without using regex operator.
+```
+string='Unable to connect to server'
+if [[ $string == *"connect to server"* ]]; then
+  echo "Take action."
+fi
+```
