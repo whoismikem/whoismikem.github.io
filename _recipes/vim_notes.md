@@ -50,8 +50,8 @@ name: Vim Notes
 `D` Delete to end of line  
 `C` Change to end of line and enter insert mode  
 `cw` Change word  
-`ct<char>` Change to character <char>  
-`dt<char>` Delete to character <char>  
+`ct<char>` Change up to character `<char>`  
+`dt<char>` Delete up to character `<char>`  
 `*` Find all instances of word  
 `zz` Center current line on page  
 `x` Delete character  
@@ -59,5 +59,5 @@ name: Vim Notes
     - `10~` Change case of 10 characters  
 `.` Perform previous command  
 `r` Replace character  
-    - `3r<char>` Replace 3 characters with <char>  
+    - `3r<char>` Replace 3 characters with `<char>`  
 
