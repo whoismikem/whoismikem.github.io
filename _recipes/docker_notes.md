@@ -1,4 +1,3 @@
-
 ---
 name: Docker Notes
 ---
@@ -20,3 +19,7 @@ Remove all exited containers:
 Command assumes the Dockerfile is in the root of the cmd. 
 Switch `-t` tags the container with a name.
 `docker build -t <container_tag> .`
+
+### Commit container image
+Save/commit a running container so it can be reused.
+`docker commit <CONTAINER ID> <ORG NAME>/<IMAGE NAME>:<VERSION>`

@@ -22,3 +22,9 @@ To get the package name of a running application:
 
 adb shell
 dumpsys package | grep -Eo "^[[:space:]]+[0-9a-f]+[[:space:]]+com.symbol.wfc.voice/[^[:space:]]+" | grep -oE "[^[:space:]]+$"
+
+## Extract APK from device
+Get the path of APK by package name
+`adb shell pm path <package_name>`
+Pull the APK from device where `<path>` is path from above cmd output
+`adb pull <path>`
