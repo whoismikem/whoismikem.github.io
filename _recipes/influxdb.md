@@ -10,5 +10,5 @@ name: Influxdb Quick Notes
 * Connect to database: `use <database name>`
 * Show measurment collections `show measurements`
 * Delete measurement series `drop series from <measurement name>`
-* Select all rows `select * from <measurement name>
+* Select all rows `select * from <measurement name>`
 
